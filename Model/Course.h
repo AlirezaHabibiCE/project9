@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class Course {
     friend class Controller;
 
@@ -19,6 +21,7 @@ public:
     Course(){}
     Course(std::string courseName, std::string profLastName, std::string semester
            , std::vector<std::string> preCourses);
+    string toString () const ;
 };
 
 

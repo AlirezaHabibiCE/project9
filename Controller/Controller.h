@@ -9,6 +9,7 @@
 
 class Controller {
     friend class Menu;
+    friend class LeafMenu;
     friend class CommandsFromFileMenu;
 private:
     std::string currentSemester;

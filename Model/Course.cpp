@@ -1,5 +1,6 @@
 #include "Course.h"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -38,4 +39,15 @@ std::istream& operator>>(std::istream & input, Course& course){
     course = myCourse;
 
     return input;
+}
+
+string Course::toString() const {
+    ostringstream output;
+    output << "courseName: " << courseName << "\tprofessor Name: " << profLastName
+           << "\tSemester: " << semester << "\tpreCourses: ";
+    for ( const auto& crs : preCourses ){
+        output<<crs<<"\t";
+    }
+
+    return output.str();
 }

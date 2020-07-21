@@ -18,6 +18,14 @@ vector
 ../Model/Course.h
 /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
 
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.cpp
+Course.h
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+iostream
+-
+sstream
+-
+
 /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
 string
 -

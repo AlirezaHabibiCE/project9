@@ -160,3 +160,9 @@ void Controller ::showStudentCourse (std:: string ID){
         cout<<"namecourse: " << crs.first <<"\tnumber of course: " <<crs.second << endl;
     }
 }
+
+double Controller::calculateSalary(string ID){
+    auto* stu = new Student(findStudent(move(ID)));
+
+    return stu->calculateSalary();
+}

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "../Model/Student.h"
+#include "../Model/DoubleMajorStudent.h"
 #include "../Model/Professor.h"
 #include "../Model/Course.h"
 
@@ -32,6 +33,7 @@ public:
     Student& findStudent(std::string ID);
     void dropCourse (const std::string& ID , std::string coursename);
     void showStudentCourse (std:: string ID);
+    double calculateSalary(string ID);
 
     bool inStudents(const std::string& ID) const;
     bool inProfessors(const std::string& ID) const;

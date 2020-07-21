@@ -151,3 +151,12 @@ void Controller::dropCourse (const std::string& ID , std::string courseName){
         findStudent(ID).currentSemesterCourses.erase(courseName);
     }
 }
+
+void Controller ::showStudentCourse (std:: string ID){
+    Student stu = findStudent(ID);
+
+    for(const auto& crs : stu.currentSemesterCourses )
+    {
+        cout<<"namecourse: " << crs.first <<"\tnumber of course: " <<crs.second << endl;
+    }
+}

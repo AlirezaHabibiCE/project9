@@ -4,7 +4,7 @@
 #include <string>
 #include "Menu.h"
 
-class KLeafMenu : public Menu{
+class LeafMenu : public Menu{
 public:
     LeafMenu(std::string name, Menu* parent);
     virtual void showSubMenus() const override;

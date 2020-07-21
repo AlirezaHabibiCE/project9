@@ -145,3 +145,9 @@ void Controller:: takeCourse(const std::string& studentID, const std::string& co
         findStudent(studentID).currentSemesterCourses.insert({courseName, 0});
     }
 }
+
+void Controller::dropCourse (const std::string& ID , std::string courseName){
+    if(inCourses(courseName)){
+        findStudent(ID).currentSemesterCourses.erase(courseName);
+    }
+}

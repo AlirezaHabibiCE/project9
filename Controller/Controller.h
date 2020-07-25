@@ -19,6 +19,9 @@ private:
     std::vector<Course> courses;
     std::vector<Course> currentSemesterCourses;
     Controller() = default;
+    vector <Person *> mathClass;
+    void readClassMember ();
+    double calculateClassSalary() const;
 
 public:
     explicit Controller(std::string currentSemester);

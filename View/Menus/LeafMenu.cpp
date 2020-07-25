@@ -95,7 +95,15 @@ void LeafMenu::run() {
 
     }
 
+    else if(name == "Read Members From File"){
+        controller.readClassMember();
+    }
+
+    else if(name == "Calculate Total Salary"){
+        controller.calculateClassSalary();
+    }
+
     else{
-        throw invalid_argument("This Menu hase not been defined!!");
+        throw invalid_argument("This Menu has not been defined!!");
     }
 }

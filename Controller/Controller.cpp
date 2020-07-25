@@ -2,6 +2,9 @@
 #include <fstream>
 #include <vector>
 #include <map>
+#include <iostream>
+#include <sstream>
+#include <iterator>
 
 using namespace std;
 
@@ -165,4 +168,47 @@ double Controller::calculateSalary(string ID){
     auto* stu = new Student(findStudent(move(ID)));
 
     return stu->calculateSalary();
+}
+
+void Controller::readClassMember (){
+    string members;
+    char* mem = new char[1000];
+    ifstream input ("members");
+    int numOfMember;
+    cout << "enter number of member class: " ;
+    cin >> numOfMember;
+    cout << "hello world";
+
+    for (int i{0} ; i < numOfMember ; ++i){
+
+        input.getline(mem , 1000);
+        members = (string) mem;
+        istringstream iss {members};
+        vector<string> result(istream_iterator<string> {iss} , istream_iterator<string>{});
+
+        if (result[0] == "D"){
+            double workhours = stoi(result[4]);
+            auto* mstu = new DoubleMajorStudent(result[1], result[2], result[3], workhours );
+            mathClass.push_back(mstu);
+        }
+
+        if (result[0] == "S"){
+            double workhours = stoi(result[4]);
+            auto* stu = new Student(result[1], result[2], result[3], workhours );
+            mathClass.push_back(stu);
+        }
+
+        if (result[0] == "P"){
+            double workhours = stoi(result[5]);
+            auto* prof = new Professor(result[1], result[2], result[3], workhours, result[4]);
+            mathClass.push_back(prof);
+        }
+}}
+
+double Controller::calculateClassSalary() const{
+    double TotalSalary = 0.0;
+    for (const auto& member : mathClass ){
+        TotalSalary = member->calculateSalary();
+    }
+    return TotalSalary;
 }

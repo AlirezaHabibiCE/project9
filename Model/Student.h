@@ -20,7 +20,7 @@ public:
     Student() : Person() {}   // must be private
     Student(const std::string& studentId, std::string first, std::string last , double workHours,
             std::vector<std::string> passedCourses, std::map<std::string, double> currentSemesterCourses);
-
+    Student(const std::string& studentId, std::string first, std::string last , double workHours);
     virtual double calculateSalary() const override;
     std::string toString() const;
 

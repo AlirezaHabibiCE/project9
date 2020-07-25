@@ -5,12 +5,18 @@ CMakeFiles/TA_19.dir/Controller/Controller.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.cpp
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
 CMakeFiles/TA_19.dir/Model/Course.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.cpp
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+CMakeFiles/TA_19.dir/Model/DoubleMajorStudent.cpp.o
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.cpp
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
 CMakeFiles/TA_19.dir/Model/Person.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.cpp
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
@@ -25,6 +31,7 @@ CMakeFiles/TA_19.dir/Model/Student.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/CommandsFromFileMenu.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
@@ -34,6 +41,7 @@ CMakeFiles/TA_19.dir/View/Menus/CommandsFromFileMenu.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/InternalMenu.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
@@ -43,6 +51,7 @@ CMakeFiles/TA_19.dir/View/Menus/InternalMenu.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/LeafMenu.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
@@ -52,6 +61,7 @@ CMakeFiles/TA_19.dir/View/Menus/LeafMenu.cpp.o
 CMakeFiles/TA_19.dir/View/Menus/Menu.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
@@ -60,6 +70,7 @@ CMakeFiles/TA_19.dir/View/Menus/Menu.cpp.o
 CMakeFiles/TA_19.dir/View/View.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h
@@ -72,6 +83,7 @@ CMakeFiles/TA_19.dir/View/View.cpp.o
 CMakeFiles/TA_19.dir/main.cpp.o
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Course.h
+ /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Person.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Professor.h
  /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Model/Student.h

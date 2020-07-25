@@ -10,6 +10,15 @@ bool validate(const string& str, const string& ptn){
     return regex_match(str, pattern);
 }
 
+Student::Student(const std::string& studentId, std::string first, std::string last , double workHours)
+    :Person(move(first), move(last) , move(workHours))
+{
+    if( !validate( studentId, "\\d{9}") ) {
+        throw invalid_argument("Student ID must have 9 digits!!");
+    }
+    this->studentId = studentId;
+}
+
 Student::Student(const std::string& studentId, std::string first, std::string last , double workHours,
         std::vector<std::string> passedCourses, std::map<std::string, double> currentSemesterCourses)
         : Person((std::move(first)), (std::move(last)), workHours ),

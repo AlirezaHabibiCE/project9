@@ -10,6 +10,10 @@ DoubleMajorStudent::DoubleMajorStudent(const std::string& studentId, std::string
     this->major2 = major2;
 }
 
+DoubleMajorStudent::DoubleMajorStudent(const string& studentId, std::string first, std::string last , double workHours)
+:Student(move (studentId), move(first), move(last) , move(workHours)){}
+
+
 double DoubleMajorStudent::calculateSalary() const{
     return 6500 * getWorkHours();
 }

@@ -51,3 +51,4 @@ string Course::toString() const {
 
     return output.str();
 }
+

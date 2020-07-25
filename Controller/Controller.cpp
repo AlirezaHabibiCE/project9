@@ -143,6 +143,15 @@ Student& Controller:: findStudent(string ID){
     throw invalid_argument("The Student was not found!!");
 }
 
+Professor& Controller:: findProfessor(string ID){
+    for( auto& prof : professors ){
+        if(prof.profId == ID){
+            return prof;
+        }
+    }
+    throw invalid_argument("The Student was not found!!");
+}
+
 void Controller:: takeCourse(const std::string& studentID, const std::string& courseName){
     if(inCourses(courseName)){
         findStudent(studentID).currentSemesterCourses.insert({courseName, 0});
@@ -177,7 +186,6 @@ void Controller::readClassMember (){
     int numOfMember;
     cout << "enter number of member class: " ;
     cin >> numOfMember;
-    cout << "hello world";
 
     for (int i{0} ; i < numOfMember ; ++i){
 
@@ -187,19 +195,19 @@ void Controller::readClassMember (){
         vector<string> result(istream_iterator<string> {iss} , istream_iterator<string>{});
 
         if (result[0] == "D"){
-            double workhours = stoi(result[4]);
+            double workhours = stod(result[4]);
             auto* mstu = new DoubleMajorStudent(result[1], result[2], result[3], workhours );
             mathClass.push_back(mstu);
         }
 
         if (result[0] == "S"){
-            double workhours = stoi(result[4]);
+            double workhours = stod(result[4]);
             auto* stu = new Student(result[1], result[2], result[3], workhours );
             mathClass.push_back(stu);
         }
 
         if (result[0] == "P"){
-            double workhours = stoi(result[5]);
+            double workhours = stod(result[5]);
             auto* prof = new Professor(result[1], result[2], result[3], workhours, result[4]);
             mathClass.push_back(prof);
         }
@@ -208,7 +216,37 @@ void Controller::readClassMember (){
 double Controller::calculateClassSalary() const{
     double TotalSalary = 0.0;
     for (const auto& member : mathClass ){
-        TotalSalary = member->calculateSalary();
+        TotalSalary += member->calculateSalary();
     }
     return TotalSalary;
+}
+
+void Controller::Submitgrade(){
+    cout << "enter your Course name:";
+    string courseName;
+    cin>>courseName;
+    cout << "enter your StudentId:";
+    string StudentId;
+    cin>>StudentId;
+    cout << "enter your grade:";
+    double grade;
+    cin>>grade;
+    Student stu = findStudent(StudentId);
+    map<string , double > setSemester;
+    setSemester.insert({courseName , grade});
+    stu.setCurrentSemesterCourses(setSemester);
+}
+
+void Controller::showProfesors (){
+    for (const auto& prof : professors ){
+        cout << prof << endl;
+    }
+    cout<<endl;
+}
+
+void Controller::showstudent (){
+    for (const auto& stu : students ){
+        cout << stu << endl;
+    }
+    cout<<endl;
 }

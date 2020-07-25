@@ -20,10 +20,11 @@ private:
     std::vector<Course> currentSemesterCourses;
     Controller() = default;
     vector <Person *> mathClass;
-    void readClassMember ();
-    double calculateClassSalary() const;
+
 
 public:
+    void readClassMember ();
+    double calculateClassSalary() const;
     explicit Controller(std::string currentSemester);
     void load();
     void save() const;
@@ -34,10 +35,13 @@ public:
             std::vector<std::string> pre);
     void takeCourse(const std::string& studentID, const std::string& courseName);
     Student& findStudent(std::string ID);
+    Professor& findProfessor(std::string ID);
     void dropCourse (const std::string& ID , std::string coursename);
     void showStudentCourse (std:: string ID);
+    void showProfesors ();
+    void showstudent ();
     double calculateSalary(string ID);
-
+    void Submitgrade();
     bool inStudents(const std::string& ID) const;
     bool inProfessors(const std::string& ID) const;
     bool inProfessorsByLastName(const std::string& last) const;

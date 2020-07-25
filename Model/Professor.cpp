@@ -3,8 +3,16 @@
 using namespace std;
 
 Professor::Professor(std::string id, std::string first, std::string last,
-        double wh, std::string title)
+                     double wh, std::string title)
         :  Person(move(first), move(last), wh), profId{move(id)}, title{move(title)} {}
+
+Professor::Professor(std::string id, std::string first, std::string last,
+                     double wh, std::string title ,std::map<std::string, double> currentSemesterCourses)
+        :  Person(move(first), move(last), wh), profId{move(id)}, title{move(title)} {
+    this->currentSemesterCourses = move(currentSemesterCourses);
+}
+
+
 
 double Professor::calculateSalary() const{
     return 4'000'000 + 10000*getWorkHours();
@@ -27,4 +35,8 @@ std::istream& operator>>(std::istream & input, Professor& prof){
     Professor pf{id, first, last, wh, title};
     prof = pf;
     return input;
+}
+
+const map<std::string, double> &Professor::getCurrentSemesterCourses() const {
+    return currentSemesterCourses;
 }

@@ -15,7 +15,7 @@ public:
     DoubleMajorStudent(const std::string& studentId, std::string first, std::string last , double workHours);
     DoubleMajorStudent(const std::string& studentId, std::string first, std::string last , double workHours,
             std::vector<std::string> passedCourses, std::map<std::string, double> currentSemesterCourses , string major2);
-    virtual double calculateSalary() const override;
+    double calculateSalary() const override;
 
 };
 

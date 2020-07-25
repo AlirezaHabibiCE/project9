@@ -1,4 +1,5 @@
 #include "LeafMenu.h"
+#include <map>
 
 using namespace std;
 
@@ -51,48 +52,71 @@ void LeafMenu::run() {
     }
 
     else if(name == "Show Professor Courses In Current Semester"){
-
+        cout << "enter the professor's ID :";
+        string Id;
+        cin >> Id;
+        Professor prof = controller.findProfessor(Id);
+        for (const auto& course : prof.getCurrentSemesterCourses() ){
+            cout << course.first <<"\t";
+        }
+        cout << endl;
     }
 
     else if(name == "Submit Grade"){
-
+        controller.Submitgrade();
     }
 
     else if(name == "Calculate Professor Salary"){
-
+        cout << "enter profId :";
+        string profID;
+        cin >> profID;
+        Professor prof = controller.findProfessor(profID);
+        cout << prof.calculateSalary() << endl;
     }
 
     else if(name == "Add Professor"){
-
+        string ID,last,title,first;
+        cout << "enter ID,first, last, title:";
+        cin >> ID >> last >> title >> first;
+        controller.addProfessor(ID,first,last,title);
     }
 
     else if(name == "Show Professors"){
-
+        controller.showProfesors();
     }
 
     else if(name == "Add Student"){
-        string ID;
+        string ID,first,last;
         cout << "Enter student number: ";
         cin >> ID;
-        string first;
         cout << "Enter First Name: ";
         cin >> first;
-        string last;
         cout << "Enter Last Name: ";
         cin >> last;
         controller.addStudent(ID, first, last);
     }
 
     else if(name == "Show Students"){
-
+        controller.showstudent();
     }
 
     else if(name == "Add Course"){
-
+        string courseName,profLast,semester;
+        int numOfpre;
+        vector <string> pre;
+        cout << "enter your courseName,profLast,semester,first and number of pre courses:";
+        cin >> courseName >> profLast>>semester >>numOfpre;
+        cout << "enter your pre courses:";
+        for (int i{0} ; i < numOfpre ; ++i){
+            cin >> pre[i] ;
+        }
+        controller.addCourse(courseName,profLast,semester,pre);
     }
 
     else if(name == "Show All Courses"){
-
+        for (const auto& crs : controller.courses ){
+            crs.toString();
+        }
     }
 
     else if(name == "Read Members From File"){
@@ -100,7 +124,7 @@ void LeafMenu::run() {
     }
 
     else if(name == "Calculate Total Salary"){
-        controller.calculateClassSalary();
+        cout << "Math salary is: " << controller.calculateClassSalary() <<endl;
     }
 
     else{

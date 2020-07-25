@@ -7,11 +7,11 @@ DoubleMajorStudent::DoubleMajorStudent(const std::string& studentId, std::string
                    : Student(studentId, move(first), move(last) ,  workHours,
         move(passedCourses), move(currentSemesterCourses))
                      {
-    this->major2 = major2;
+    this->major2 = move(major2);
 }
 
 DoubleMajorStudent::DoubleMajorStudent(const string& studentId, std::string first, std::string last , double workHours)
-:Student(move (studentId), move(first), move(last) , move(workHours)){}
+:Student( (studentId), move(first), move(last) , (workHours)){}
 
 
 double DoubleMajorStudent::calculateSalary() const{

@@ -37,7 +37,7 @@ public:
     Student& findStudent(std::string ID);
     Professor& findProfessor(std::string ID);
     void dropCourse (const std::string& ID , std::string coursename);
-    void showStudentCourse (std:: string ID);
+    void showStudentCurrentCourse (std:: string ID);
     void showProfesors ();
     void showstudent ();
     double calculateSalary(string ID);

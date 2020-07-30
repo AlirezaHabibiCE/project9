@@ -149,7 +149,7 @@ Professor& Controller:: findProfessor(string ID){
             return prof;
         }
     }
-    throw invalid_argument("The Student was not found!!");
+    throw invalid_argument("The Professor wasn't found!!");
 }
 
 void Controller:: takeCourse(const std::string& studentID, const std::string& courseName){
@@ -164,12 +164,12 @@ void Controller::dropCourse (const std::string& ID , std::string courseName){
     }
 }
 
-void Controller ::showStudentCourse (std:: string ID){
+void Controller ::showStudentCurrentCourse (std:: string ID){
     Student stu = findStudent(ID);
 
     for(const auto& crs : stu.currentSemesterCourses )
     {
-        cout<<"namecourse: " << crs.first <<"\tnumber of course: " <<crs.second << endl;
+        cout<<"course name: " << crs.first <<"\tcourse grade: " <<crs.second << endl;
     }
 }
 
@@ -231,11 +231,12 @@ void Controller::Submitgrade(){
     cout << "enter your grade:";
     double grade;
     cin>>grade;
-    Student stu = findStudent(StudentId);
-    map<string , double > setSemester;
-    setSemester.insert({courseName , grade});
-    stu.setCurrentSemesterCourses(setSemester);
-}
+    Student& stu = findStudent(StudentId);
+    for( auto& crs : stu.currentSemesterCourses ){
+        if(crs.first == courseName ){
+            crs.second = grade;}}
+    }
+
 
 void Controller::showProfesors (){
     for (const auto& prof : professors ){

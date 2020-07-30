@@ -94,8 +94,9 @@ void Controller:: addCourse(std::string courseName, std::string profLast, std::s
         if( crs.semester == currentSemester){
             currentSemesterCourses.push_back(crs);
         }
-    }
-
+    } else
+        throw invalid_argument (
+         " your course name or Professor last name isn't on the our list ");
 }
 
 bool Controller::inStudents(const std::string& ID) const{

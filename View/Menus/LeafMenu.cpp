@@ -1,5 +1,6 @@
 #include "LeafMenu.h"
 #include <map>
+#include <iomanip>
 
 using namespace std;
 
@@ -90,13 +91,13 @@ void LeafMenu::run() {
 
     else if(name == "Add Student"){
         string ID,first,last;
-        cout << "Enter student number: ";
+        cout << "Enter student ID: ";
         cin >> ID;
         cout << "Enter First Name: ";
         cin >> first;
         cout << "Enter Last Name: ";
         cin >> last;
-        controller.addStudent(ID, first, last);
+        controller.addStudent(ID , first, last);
     }
 
     else if(name == "Show Students"){
@@ -107,18 +108,31 @@ void LeafMenu::run() {
         string courseName,profLast,semester;
         int numOfpre;
         vector <string> pre;
-        cout << "enter your courseName,profLast,semester,first and number of pre courses:";
+        cout << "enter your courseName,profLast,semester and number of pre courses:";
         cin >> courseName >> profLast>>semester >>numOfpre;
-        cout << "enter your pre courses:";
+
+        if ( numOfpre != 0){
+        cout << "enter your pre courses:";}
+
         for (int i{0} ; i < numOfpre ; ++i){
             cin >> pre[i] ;
         }
-        controller.addCourse(courseName,profLast,semester,pre);
+        try
+        {   controller.addCourse(courseName,profLast,semester,pre);
+        }
+           catch(invalid_argument e){
+          cout << e.what() << endl;}
+    }
+
+    else if(name == "Show Current Semester Courses"){
+        for (const auto& crs : controller.currentSemesterCourses ){
+            cout << crs.toString() << endl;
+        }
     }
 
     else if(name == "Show All Courses"){
         for (const auto& crs : controller.courses ){
-            crs.toString();
+            cout << crs.toString() << endl;
         }
     }
 

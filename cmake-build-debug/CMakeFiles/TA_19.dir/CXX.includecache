@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.cpp
-Controller.h
-/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
-fstream
--
-vector
--
-map
--
-iostream
--
-sstream
--
-iterator
--
-
 /cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
 string
 -
@@ -73,4 +57,26 @@ vector
 -
 map
 -
+
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/View/Menus/LeafMenu.cpp
+LeafMenu.h
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
+map
+-
+iomanip
+-
+
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
+string
+-
+Menu.h
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/View/Menus/Menu.h
+
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/View/Menus/Menu.h
+string
+-
+vector
+-
+../../Controller/Controller.h
+/cygdrive/c/Users/PC-MAHDI/CLionProjects/EducationSystem/Controller/Controller.h
 

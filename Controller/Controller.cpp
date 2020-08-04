@@ -88,6 +88,7 @@ void Controller:: addProfessor(std::string ID, std::string first,
 
 void Controller:: addCourse(std::string courseName, std::string profLast, std::string semester,
                std::vector<std::string> pre){
+    //check has exit this course also professor
     if( !inCourses(courseName) && inProfessorsByLastName(profLast) ){
         Course crs{move(courseName), move(profLast), move(semester), move(pre)};
         courses.push_back(crs);
@@ -190,11 +191,13 @@ void Controller::readClassMember (){
 
     for (int i{0} ; i < numOfMember ; ++i){
 
+        //separate line to a array of string according to words
         input.getline(mem , 1000);
         members = (string) mem;
         istringstream iss {members};
         vector<string> result(istream_iterator<string> {iss} , istream_iterator<string>{});
 
+        //breaking down list to Double Major Studnt and Student and Professor
         if (result[0] == "D"){
             double workhours = stod(result[4]);
             auto* mstu = new DoubleMajorStudent(result[1], result[2], result[3], workhours );
@@ -218,6 +221,7 @@ double Controller::calculateClassSalary() const{
     double TotalSalary = 0.0;
     for (const auto& member : mathClass ){
         TotalSalary += member->calculateSalary();
+        //calculate salary is a pure virtual function in Person Class
     }
     return TotalSalary;
 }
@@ -232,7 +236,7 @@ void Controller::Submitgrade(){
     cout << "enter your grade:";
     double grade;
     cin>>grade;
-    Student& stu = findStudent(StudentId);
+    Student& stu = findStudent(StudentId);//by reference for save changes
     for( auto& crs : stu.currentSemesterCourses ){
         if(crs.first == courseName ){
             crs.second = grade;}}
@@ -242,13 +246,13 @@ void Controller::Submitgrade(){
 void Controller::showProfesors (){
     for (const auto& prof : professors ){
         cout << prof << endl;
-    }
+    }//we implement operator << for professor
     cout<<endl;
 }
 
 void Controller::showstudent (){
     for (const auto& stu : students ){
         cout << stu << endl;
-    }
+    }//we implement operator << for student
     cout<<endl;
 }
